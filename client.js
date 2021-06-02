@@ -10,6 +10,11 @@ const connect = function() {
 
   conn.on('data', (data) => {
     console.log('data from server',data);
+    
+  });
+  conn.on('connect',() =>{
+    conn.write("Name: EME");
+
   });
 
   return conn;
