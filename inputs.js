@@ -2,7 +2,7 @@ const {UPKEY,DOWNKEY,LEFTKEY,RIGHTKEY} = require('./directions');
 // Stores the active TCP connection object.
 let connection;
 
-const setupInput = function(conn) {
+const setupInput = (conn) => {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);

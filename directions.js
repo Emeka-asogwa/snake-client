@@ -1,7 +1,7 @@
-const UPKEY = "Move: up";
-const LEFTKEY = "Move: left";
-const DOWNKEY = "Move: down";
-const RIGHTKEY = "Move: right";
+const UPKEY = "w";
+const LEFTKEY = "a";
+const DOWNKEY = "s";
+const RIGHTKEY = "d";
 
 
 module.exports = {
