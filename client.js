@@ -1,9 +1,12 @@
 const net = require("net");
 const {UPKEY,DOWNKEY,LEFTKEY,RIGHTKEY} = require('./directions');
+const {IP,PORT,PASSWORD} = require("./constants");
 const connect = function() {
+  console.log("Inside connect");
   const conn = net.createConnection({
-    host: '135.23.222.131', // IP address here,
-    port: 50542, // PORT number here,
+    host: IP, // IP address here,
+    port: PORT, // PORT number here,
+    password:PASSWORD,
   });
 
   // interpret incoming data as text
@@ -17,13 +20,13 @@ const connect = function() {
     conn.write("Name: EME");
     //
     
-    setTimeout( () => {
-      conn.write(UPKEY)
-      //conn.write(LEFTKEY);
-    },2000)
-    setTimeout( () => {
-      conn.write(LEFTKEY);
-    },5000)
+    // setTimeout( () => {
+    //   conn.write(UPKEY)
+    //   //conn.write(LEFTKEY);
+    // },2000)
+    // setTimeout( () => {
+    //   conn.write(LEFTKEY);
+    // },5000)
 
 
 
@@ -37,4 +40,4 @@ console.log("Connecting ...");
 
 
 
-module.exports = connect;
+module.exports = { connect };

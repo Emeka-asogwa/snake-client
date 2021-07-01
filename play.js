@@ -2,9 +2,8 @@ const { connect } = require('./client');
 
 const { setupInput } = require('./inputs');
 
-console.log("Connecting ...");
-connect();
-setupInput();
+console.log("Connecting from play ...");
+setupInput(connect());
 
 //setupInput(connect());
 

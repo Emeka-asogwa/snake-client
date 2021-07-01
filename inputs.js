@@ -8,18 +8,17 @@ const setupInput = (conn) => {
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
   stdin.resume();
-
   const handleUserInput = key => {
     if (key === '\u0003') {
       process.exit();
     } else if (key === UPKEY) {
-      conn.write('Move: up');
+      connection.write('Move: up');
     } else if (key === LEFTKEY) {
-      conn.write('Move: left');
+      connection.write('Move: left');
     } else if (key === DOWNKEY) {
-      conn.write('Move: down');
+      connection.write('Move: down');
     } else if (key === RIGHTKEY) {
-      conn.write('Move: right');
+      connection.write('Move: right');
     } 
   };
   stdin.on('data', (data) => {
